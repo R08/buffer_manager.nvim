@@ -84,7 +84,7 @@ end
 local function can_be_deleted(bufname, bufnr)
   return (
     vim.api.nvim_buf_is_valid(bufnr)
-    and (not string_starts(bufname, "term://"))
+    --and (not string_starts(bufname, "term://"))
     and (not vim.bo[bufnr].modified)
     and bufnr ~= -1
   )
